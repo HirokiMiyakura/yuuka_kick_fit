@@ -1,0 +1,48 @@
+p,
+li {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.list-group-item {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 1024px) {
+  img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  #header .logo h1 {
+    font-size: 20px;
+  }
+  .main-message {
+    font-size: 30px;
+  }
+}
+.main-message {
+  line-height: 1.5;
+}
+
+.wpcf7 label,
+.wpcf7 input,
+.wpcf7 textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+.wpcf7 input,
+.wpcf7 textarea {
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+.wpcf7 input[type=submit] {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, rgb(39, 70, 133) 0%, rgb(61, 179, 197) 100%);
+}/*# sourceMappingURL=main.css.map */
