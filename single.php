@@ -4,33 +4,23 @@
 **/
 
 get_header(); ?>
-<main id="main">
-  <!-- ======= Features Section ======= -->
-  <section class="hero-section inner-page">
-    <?php get_template_part('template/wave_others'); ?>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12">
-          <div class="row justify-content-center">
-            <div class="col-md-10 text-center hero-text">
-              <h1 class="h2" data-aos="fade-up" data-aos-delay=""><?php the_title(); ?></h1>
-              <p data-aos="fade-up" data-aos-delay="100"><?php the_time('Y年m月d日'); ?></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<main>
+<section class="section mb-5">
+	<div class="outside-left">
+		<p><img class="img-fluid rounded-3" src="<?php echo get_template_directory_uri(); ?>/assets/img/bg_main.jpeg" alt=""></p>
+	</div>
+	<!-- <h1 class="main-message main-message-1"><?php the_title(); ?></h1> -->
+	<!-- <h1 class="main-message main-message-2">皆様の役に立つ情報を発信しております</h1> -->
+</section>
 
-  <!-- ======= Blog Section ======= -->
-  <section class="section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <?php the_content(); ?>
-      </div>
+<section class="mb-5">
+  <div class="container ps-sm-5 pe-sm-5">
+    <div class="row">
+      <h2 class="mb-4"><?php the_title(); ?></h2>
+      <p class="mb-4"><?php the_time('Y年m月d日'); ?></p>
+      <?php the_content(); ?>
     </div>
-  </section>
-  <!-- ======= End Blog Section ======= -->
-
-</main><!-- End #main -->
+  </div>
+</section>
+</main>
 <?php get_footer(); ?>

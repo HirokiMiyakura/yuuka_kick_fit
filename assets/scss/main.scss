@@ -1,31 +1,226 @@
-p,
-li {
-	line-height: 2;
+body {
+	// font-family: 'Roboto', 'Noto Serif JP', serif;
+	// font-family: 'Roboto';
+	// font-family: 'Noto Serif JP';
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.purple {
+	color: purple;
+}
+
+.bg {
+	padding-top: 4rem;
+	background: #f5f5f5;
+}
+
+.section-heading {
+	width: 85vw;
+	margin: 0 auto 4rem;
+	color: #333;
+	text-align: center;
 	letter-spacing: 1px;
+	font-weight: 900;
+	background: linear-gradient(
+		transparent 0% 50%,
+		rgba(255, 87, 205, 0.3) 50% 100%
+	);
+	// background: linear-gradient(-45deg, hsl(304, 46%, 56%), #66388c);
 }
 
-.list-group-item {
-	font-size: 16px;
-	line-height: 1.7;
-}
-
-@media screen and (max-width: 1024px) {
-	img {
-		width: 100%;
+@media screen and (min-width: 567px) {
+	.section-heading {
+		width: 40vw;
+		font-size: 2.25rem;
 	}
 }
 
-@media screen and (max-width: 599px) {
-	#header .logo h1 {
-		font-size: 20px;
+.grid_two {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 472px;
+	&_left {
+		background: url(../img/main_1.jpeg) no-repeat center/cover;
+		height: 100%;
 	}
-	.main-message {
-		font-size: 30px;
+	&_right {
+		padding: 115px 50px;
+		background: palevioletred;
+		color: white;
+		position: relative;
+		h2 {
+			color: #fff;
+			padding-bottom: 14px;
+			border-bottom: 1px solid #fff;
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: -160px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 0 472px 160px;
+			border-color: transparent transparent palevioletred transparent;
+		}
+
+		a.btn--red.btn--cubic {
+			border-bottom: 5px solid #9f000c;
+			background: #fff;
+		}
+
+		a.btn--red.btn--cubic:hover {
+			margin-top: 3px;
+			border-bottom: 2px solid #ffffff;
+			color: palevioletred;
+		}
+
+		a.btn--radius {
+			border-radius: 100vh;
+		}
+
+		.fa-position-right {
+			position: absolute;
+			top: calc(50% - 0.5em);
+			right: 1rem;
+		}
 	}
+}
+
+@media screen and (max-width: 576px) {
+	.sp-image {
+		width: 75%;
+		margin: auto;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+//codepen.io/recooord/pen/xxPYgyo
+
+/*スクロールバーが表示される閲覧環境用に設定*/
+main {
+	overflow: hidden;
+}
+
+.section {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1000px;
+	max-width: 90vw;
+	padding: 10px 40px;
+	margin: auto;
+	position: relative;
+}
+
+@media screen and (min-width: 567px) {
+	.section {
+		padding: 0 40px 40px;
+		max-width: 70vw;
+	}
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.8;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.reverse {
+	flex-direction: row-reverse;
+}
+
+.column {
+	width: 48%;
+}
+
+/*右側へ要素を広げる（2カラム）*/
+.column-outside-right {
+	flex: 1;
+	margin-right: calc(50% - 50vw);
+	margin-left: 4%;
+}
+
+/*左側へ要素を広げる（2カラム）*/
+.column-outside-left {
+	flex: 1;
+	margin-left: calc(50% - 50vw);
+	margin-right: 4%;
+}
+
+/*右側へ要素を広げる（1カラム）*/
+.outside-right {
+	margin-right: calc(50% - 50vw);
+}
+
+/*左側へ要素を広げる（1カラム）*/
+.outside-left {
+	margin-left: calc(50% - 50vw);
+	position: relative;
 }
 
 .main-message {
-	line-height: 1.5;
+	position: absolute;
+	right: -7vw;
+	background: purple;
+	background: linear-gradient(-45deg, hsl(304, 46%, 56%), #66388c);
+	color: #fff;
+	padding: 0.5rem 1.5rem;
+	border-radius: 5px;
+	font-size: 1rem;
+	text-align: center;
+	// opacity: 0.85;
+}
+
+.main-message-1 {
+	top: 25%;
+}
+
+.main-message-2 {
+	top: 50%;
+}
+
+@media screen and (min-width: 567px) {
+	.main-message {
+		right: -10vw;
+		padding: 0.75rem 2rem;
+		font-size: 3rem;
+		min-width: 40vw;
+	}
+
+	.main-message-1 {
+		top: 28%;
+	}
+
+	.main-message-2 {
+		top: 50%;
+	}
+}
+
+.my-btn {
+	width: 100%;
+	display: block;
+	padding: 0.75rem 1rem;
+	background: purple;
+	background: linear-gradient(-45deg, hsl(304, 46%, 56%), #66388c);
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	letter-spacing: 2px;
 }
 
 .wpcf7 {
@@ -47,10 +242,12 @@ li {
 		letter-spacing: 2px;
 		border: none;
 		padding: 0.5rem 1rem;
-		background: linear-gradient(
-			to right,
-			rgb(39, 70, 133) 0%,
-			rgb(61, 179, 197) 100%
-		);
+		background: linear-gradient(-45deg, hsl(304, 46%, 56%), #66388c);
+	}
+	input[type='checkbox'] {
+		width: auto;
+	}
+	.wpcf7-list-item-label {
+		padding-left: 1rem;
 	}
 }

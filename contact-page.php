@@ -4,35 +4,26 @@
 **/
 
 get_header(); ?>
-<main id="main">
-  <section class="hero-section inner-page">
-    <?php get_template_part('template/wave_others'); ?>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12">
-          <div class="row justify-content-center">
-            <div class="col-md-7 text-center hero-text">
-              <h1 data-aos="fade-up" data-aos-delay="">お問い合わせ</h1>
-              <p data-aos="fade-up" data-aos-delay="100">お気軽にご相談ください</p>
-            </div>
-          </div>
-        </div>
+<main>
+<section class="section mb-5">
+	<div class="outside-left">
+		<p><img class="img-fluid rounded-3" src="<?php echo get_template_directory_uri(); ?>/assets/img/bg_main.jpeg" alt=""></p>
+	</div>
+	<h1 data-aos="zoom-out-left" data-aos-delay="500" data-aos-duration="1000" class="main-message main-message-1">お問い合わせ</h1>
+	<!-- <h1 class="main-message main-message-2">皆様の役に立つ情報を発信しております</h1> -->
+</section>
+
+<section class="mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto mb-4" data-aos="fade-up">
+        <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" class="section-heading">お問い合わせフォーム</h2>
       </div>
     </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-8" data-aos="fade-up">
-          <h2 class="section-heading mb-4">お問い合わせフォーム</h2>
-        </div>
-      </div>
-      <div class="col-md-10 mx-auto">
-        <?php echo do_shortcode('[contact-form-7 id="22" title="コンタクトフォーム"]'); ?>
-        <p>※ ご記入頂きました個人情報は個別面談の日時等に関するご連絡およびセミナーのご案内以外には使用いたしません。</p>
-      </div>
-      <!-- <p>ご記入頂きました個人情報は個別面談の日時等に関するご連絡およびセミナーのご案内以外には使用いたしません。</p> -->
+    <div class="col-md-8 mx-auto">
+      <?php echo do_shortcode('[contact-form-7 id="22" title="コンタクトフォーム"]'); ?>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 <?php get_footer(); ?>
